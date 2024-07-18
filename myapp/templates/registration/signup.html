@@ -1,7 +1,7 @@
 {% extends "sugoianime/base2.html" %}
 {% load static %}
 {% block content %}
-
+{% load crispy_forms_tags %}
 
     <!-- Normal Breadcrumb Begin -->
     <section class="normal-breadcrumb set-bg" data-setbg="img/normal-breadcrumb.jpg">
@@ -19,23 +19,24 @@
     <!-- Normal Breadcrumb End -->
 
     <!-- Signup Section Begin -->
-    <section class="signup spad">
+     <section class="signup spad">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="login__form">
                         <h3>REGISTRATE</h3>
-                        <form action="#">
-                            <div class="input__item">
-                                <input type="text" placeholder="Email address">
+                        <form action="" method="POST">
+                            {% csrf_token %}
+                            <div class="input__item" name="email">
+                                <input type="text" placeholder="Correo electrónico">
                                 <span class="icon_mail"></span>
                             </div>
-                            <div class="input__item">
-                                <input type="text" placeholder="Your Name">
+                            <div class="input__item" name="username">
+                                <input type="text" placeholder="Nombre de usuario">
                                 <span class="icon_profile"></span>
                             </div>
-                            <div class="input__item">
-                                <input type="text" placeholder="Password">
+                            <div class="input__item" name="password">
+                                <input type="text" placeholder="Contraseña">
                                 <span class="icon_lock"></span>
                             </div>
                             <button type="submit" class="site-btn">Registrarse</button>

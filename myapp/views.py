@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
+from django.contrib.auth.models import User
+from django.contrib.sessions.models import Session
 
 def index(request):
     return render(request, 'sugoianime/index.html')
@@ -14,8 +16,22 @@ def home(request):
 def login(request):    
     return render(request, 'registration/login.html')
 
-def signup(request):
+def signup(request):    
     return render(request, 'registration/signup.html')
+
+def registro(request):
+    if request.method != "POST":
+        context={"clase": "registro"}
+        return render(request, 'registration/registro.html', context)
+    else:
+        nombre = request.POST["nombre"]
+        email = request.POST["email"]
+        password = request.POST["password"]
+        user = User.objects.create_user(nombre, email, password)
+        user.save()
+        context={"clase": "registro", "mensaje":"Los datos fueron registrados"}
+        return render(request, 'registration/registro.html', context)
+    
 @login_required
 def categories(request):
     return render(request, 'sugoianime/categories.html')
