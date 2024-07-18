@@ -1,0 +1,66 @@
+{% extends "sugoianime/base.html" %}
+
+{% block content %}
+{% load static %}
+    <!-- Normal Breadcrumb Begin -->
+    <section class="normal-breadcrumb set-bg">  
+        
+        <div class="container"> 
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="normal__breadcrumb__text">
+                        <img src={% static 'img/normal-breadcrumb.jpg' %} alt="Background Image" class="breadcrumb-img">
+                        <h2>INICIAR SESIÓN</h2>
+                        <p>Bienvenid@s a SugoIanime </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Normal Breadcrumb End -->
+
+    <!-- Login Section Begin -->
+    <section class="login spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="login__form">
+                        <h3>INICIA SESIÓN</h3>
+                        <form action="" method="post">
+                            {% csrf_token %}
+                            <input type="text" name="username" id="" placeholder="Nombre de usuario">
+                           
+                            <input type="password" name="password" id="" placeholder="Contraseña">
+                            <br>
+
+                            <button type="submit" class="site-btn">Acceder</button>
+                        </form>
+                        <a href="#" class="forget_pass">¿Olvidaste tu contraseña?</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="login__register">
+                        <h3>¿No tienes una cuenta?</h3>
+                        <a href={% url 'signup' %} class="primary-btn">Subscribete ahora</a>
+                    </div>
+                </div>
+            </div>
+            <div class="login__social">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="login__social__links">
+                            <span>¡Siguenos en nuestras redes sociales!</span>
+                            <ul>
+                                <li><a href="#" class="facebook"><i class="fa fa-facebook"></i> Facebook</a></li>
+                                <li><a href="#" class="google"><i class="fa fa-instagram"></i> Instagram</a></li>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Login Section End -->
+
+    {% endblock content %}

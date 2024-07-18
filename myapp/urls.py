@@ -1,14 +1,18 @@
 from django.urls import path
-from . import views
+from .views import index,home,login,signup,categories,news,newsdetails,animedetails,animewatching,crud,blog,exit
 
 
 urlpatterns = [
-    path('home/', views.home, name = 'home'),
-    path('login/', views.login, name = 'login'),
-    path('signup/', views.signup, name = 'crear-cuenta'),
-    path('categories/', views.categories, name = 'categories'),
-    path('news/', views.news, name = 'noticias'),
-    path('news-details/', views.newsdetails, name = 'detalles-noticias'),
-    path('anime-details/', views.animedetails, name = 'detalles-anime'),
-    path('anime-watching/', views.animewatching, name = 'ver-anime'),        
+ path('', index, name='index'),
+ path('home/', home, name='home'),
+ path('login/', login, name='login'),
+ path('signup/', signup, name='signup'),
+ path('categories/', categories, name='categories'),
+ path('news/', news, name='news'),
+ path('newsdetails/', newsdetails, name='newsdetails'),
+ path('animedetails/', animedetails, name='animedetails'),
+ path('animewatching/', animewatching, name='animewatching'),
+ path('crud/', crud, name='crud'),
+ path('blog/', blog, name='blog'),
+ path('logout/', exit, name='exit'),
 ]

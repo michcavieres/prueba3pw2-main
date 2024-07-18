@@ -563,6 +563,28 @@ ol {
 	margin-right: 0;
 }
 
+
+
+
+
+.set-video-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 200%;
+	height: 200%;
+	object-fit: cover;
+	
+}
+.hero__items {
+	position: relative;
+	overflow: hidden;
+}
+
+
+
+
+
 .hero__slider.owl-carousel .owl-nav button {
 	font-size: 36px;
 	height: 66px;
@@ -1424,6 +1446,10 @@ ol {
 	line-height: 34px;
 }
 
+
+.instagram {
+	background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
 /*---------------------
   Blog Details
 -----------------------*/
@@ -1486,6 +1512,10 @@ ol {
 
 .blog__details__title .blog__details__social a.twitter {
 	background: #39a1f2;
+}
+
+.blog__details__title .blog__details__social a.twitter2 {
+	background: #e205c5;
 }
 
 .blog__details__title .blog__details__social a i {
@@ -1890,6 +1920,13 @@ ol {
 .login__social__links ul li a.twitter {
 	background: #1da1f2;
 }
+
+.login__social__links ul li a.twitter2 {
+	background: #1da1f2;
+}
+
+
+
 
 .login__social__links ul li a i {
 	font-size: 20px;
