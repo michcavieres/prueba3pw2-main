@@ -30,6 +30,49 @@ body {
 	background: #000000;
 }
 
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Ajusta el contenedor para que solo ocupe el espacio necesario */
+    
+    top: 0%;
+    left: 0%;
+    
+}
+
+.profile-picture {
+    width: 150px; /* Tamaño del círculo */
+    height: 150px; /* Tamaño del círculo */
+    border-radius: 50%; /* Hace el div circular */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga */
+    border: 2px solid #ccc; /* Borde opcional */
+    background-color: #fff; /* Fondo opcional */
+}
+
+.profile-picture img {
+    width: 100%; /* Asegura que la imagen se ajuste al círculo */
+    height: 100%;
+    object-fit: cover; /* Mantiene la relación de aspecto de la imagen */
+}
+
+.profile-picture {
+    width: 150px; /* Tamaño del círculo */
+    height: 150px; /* Tamaño del círculo */
+    border-radius: 50%; /* Hace el div circular */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga */
+    border: 2px solid #ccc; /* Borde opcional */
+    background-color: #fff; /* Fondo opcional */
+}
+
+.profile-picture img {
+    width: 100%; /* Asegura que la imagen se ajuste al círculo */
+    height: 100%;
+    object-fit: cover; /* Mantiene la relación de aspecto de la imagen */
+}
+
+
 h1,
 h2,
 h3,
@@ -43,7 +86,8 @@ h6 {
 }
 
 h1 {
-	font-size: 70px;
+	color: #ffffff;
+	font-size: 2rem;
 }
 
 h2 {
@@ -100,7 +144,7 @@ ol {
 }
 
 /*---------------------
-  Helper CSS
+Helper CSS
 -----------------------*/
 
 .section-title {
@@ -140,6 +184,7 @@ ol {
 	padding-bottom: 100px;
 }
 
+.text-white, 
 .text-white h1,
 .text-white h2,
 .text-white h3,
@@ -151,6 +196,10 @@ ol {
 .text-white li,
 .text-white a {
 	color: #fff;
+}
+
+.text-white h2 {
+	color: #ccc; /* or any other lighter gray shade you prefer */
 }
 
 /* buttons */
@@ -2181,6 +2230,7 @@ ol {
 	}
 }
 
+
 /* Wide Mobile = 480px */
 
 @media only screen and (max-width: 767px) {
@@ -2389,3 +2439,46 @@ ol {
 		padding: 18px 20px 20px;
 	}
 }
+
+/*personalizacion de perfil*/
+/* Estilos para la página de perfil */
+
+/* Contenedor del perfil */
+.profile-container {
+	flex-direction: column;
+    align-items: center;
+    text-align: center;
+	display: flex;
+	align-items: center;
+	margin: 20px;
+	padding: 20px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-picture {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin: 10px;
+}
+
+.profile-picture img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.username {
+	font-weight: bold;
+	color: #337ab7;
+	margin-top: 10px;
+}
+
+.light-gray {
+	color: #ccc; /* or any other lighter gray shade you prefer */
+}
+
+

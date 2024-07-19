@@ -1,7 +1,17 @@
 {% extends "sugoianime/base.html" %}
-
+{% load static %}
 {%block content %}
 
-Este es el perfil del usuario {{user.username}}
+
+    <div class="profile-container">
+        <div class="profile-picture">
+            <img src="{% static 'img/hero/hero-1.jpg' %}" alt="Perfil">            
+        </div>
+        <div class="username">
+            <H2><span class="light-gray">Hola, <span class="username">{{user.username}}</span></span></H2>
+        </div>
+        
+    </div>
+
 
 {% endblock %}
