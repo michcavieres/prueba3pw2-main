@@ -38,6 +38,10 @@ def categories(request):
 def news(request):
     return render(request, 'sugoianime/news.html')
 @login_required
+def perfil(request):
+    context={"clase": "perfil"}
+    return render(request, 'sugoianime/perfil.html', context)
+@login_required
 def newsdetails(request):
     return render(request, 'sugoianime/news-details.html')
 @login_required

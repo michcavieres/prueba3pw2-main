@@ -57,7 +57,16 @@
                                     </ul>
                                 </li>
                                 {% if request.user.is_authenticated %}
-                                    <li><a href="{% url 'exit' %}">Salir</a></li>
+                                    <li><a href="#">{{user.username}} <span class="arrow_carrot-down"></span></a>
+                                        <ul class="dropdown">
+                                            <li><a href={% url 'perfil' %}>Mi perfil</a></li>
+                                            <li><a href={% url 'exit' %}>Cerrar sesión</a></li>
+                                            
+
+                                        </ul>
+                                    </li>
+                                    
+                                    
                                 {% else %}
                                     <li><a href={% url 'login' %}>Ingresar</a></li>
                                 {% endif %}    
