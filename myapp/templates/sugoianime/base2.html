@@ -33,39 +33,6 @@
 <body>
 
 
-    <!-- Header Section Begin -->
-    <header class="header">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-2">
-                    <div class="header__logo">
-                        <a href={% url 'home' %}>
-                            <img src={% static 'img/logo-sugoi.png'%} alt="">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-8">
-                    <div class="header__nav">
-                        <nav class="header__menu mobile-menu">
-                            <ul>
-
-                                {% if request.user.is_authenticated %}
-                                    <li><a href="{% url 'exit' %}">Salir</a></li>
-                                {% else %}
-                                    <li><a href={% url 'login' %}>Ingresar</a></li>
-                                    <li><a href={% url 'registro' %}>Registrate</a></li>
-                                {% endif %}    
-                                <li><a href={% url 'news' %}>Noticias</a></li>                                
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-                
-            </div>
-            <div id="mobile-menu-wrap"></div>
-        </div>
-    </header>
-    <!-- Header End -->
 
     {% block content %}{% endblock  %}
 
@@ -85,10 +52,9 @@
             <div class="col-lg-6">
                 <div class="footer__nav">
                     <ul>
-                        <li class="active"><a href={% url 'home' %}>Página de inicio</a></li>
-                        <li><a href={% url 'categories' %}>Categorias</a></li>
-                        <li><a href={% url 'news' %}>Noticias</a></li>
-                        <li><a href="#">Contacts</a></li>
+                        <li class="active"><a href={% url 'index' %}>Página de inicio</a></li>
+                        
+                        <li><a href="#">Contacto</a></li>
                     </ul>
                 </div>
             </div>
