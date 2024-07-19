@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import index,home,login,categories,news,newsdetails,animedetails,animewatching,crud,blog,exit,registro,perfil
+from .views import index,home,login,categories,news,newsdetails,animedetails,animewatching,crud,blog,exit,registro,perfil,create_crud,detail_crud
 
 
 urlpatterns = [
@@ -14,6 +14,10 @@ urlpatterns = [
  path('animedetails/', animedetails, name='animedetails'),
  path('animewatching/', animewatching, name='animewatching'),
  path('crud/', crud, name='crud'),
+ path('crud/create/', create_crud, name = 'create_crud'),
+ path('crud/<int:media_id>/',detail_crud, name = 'detail_crud'),
+ 
  path('blog/', blog, name='blog'),
  path('logout/', exit, name='exit'),
+ 
 ]

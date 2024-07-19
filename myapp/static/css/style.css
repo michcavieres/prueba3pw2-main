@@ -30,6 +30,49 @@ body {
 	background: #000000;
 }
 
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Ajusta el contenedor para que solo ocupe el espacio necesario */
+    
+    top: 0%;
+    left: 0%;
+    
+}
+
+.profile-picture {
+    width: 150px; /* Tamaño del círculo */
+    height: 150px; /* Tamaño del círculo */
+    border-radius: 50%; /* Hace el div circular */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga */
+    border: 2px solid #ccc; /* Borde opcional */
+    background-color: #fff; /* Fondo opcional */
+}
+
+.profile-picture img {
+    width: 100%; /* Asegura que la imagen se ajuste al círculo */
+    height: 100%;
+    object-fit: cover; /* Mantiene la relación de aspecto de la imagen */
+}
+
+.profile-picture {
+    width: 150px; /* Tamaño del círculo */
+    height: 150px; /* Tamaño del círculo */
+    border-radius: 50%; /* Hace el div circular */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga */
+    border: 2px solid #ccc; /* Borde opcional */
+    background-color: #fff; /* Fondo opcional */
+}
+
+.profile-picture img {
+    width: 100%; /* Asegura que la imagen se ajuste al círculo */
+    height: 100%;
+    object-fit: cover; /* Mantiene la relación de aspecto de la imagen */
+}
+
+
 h1,
 h2,
 h3,
@@ -2180,6 +2223,7 @@ ol {
 		padding-left: 0;
 	}
 }
+
 
 /* Wide Mobile = 480px */
 

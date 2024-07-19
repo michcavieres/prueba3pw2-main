@@ -27,6 +27,7 @@
     <link rel="stylesheet" href={% static 'css/owl.carousel.min.css'%} />
     <link rel="stylesheet" href={% static 'css/slicknav.min.css'%} />
     <link rel="stylesheet" href={% static 'css/style.css'%} />   
+ 
 
 </head>
 
@@ -56,12 +57,19 @@
                                         <li><a href={% url 'login' %}>Acción</a></li>
                                     </ul>
                                 </li>
+
                                 {% if request.user.is_authenticated %}
                                     <li><a href="#">{{user.username}} <span class="arrow_carrot-down"></span></a>
                                         <ul class="dropdown">
+                                            {% if request.user.is_staff %}
+                                                <li><a href={% url 'crud' %}>CRUD</a></li>
+                                                <li><a href={% url 'create_crud' %}>Crear CRUD</a></li>
+                                            {% else %}
+                                                <li><a href={% url 'perfil' %}>Mi perfil</a></li>
+                                                <li><a href={% url 'exit' %}>Cerrar sesión</a></li>
+                                            {% endif %}
                                             <li><a href={% url 'perfil' %}>Mi perfil</a></li>
                                             <li><a href={% url 'exit' %}>Cerrar sesión</a></li>
-                                            
 
                                         </ul>
                                     </li>
