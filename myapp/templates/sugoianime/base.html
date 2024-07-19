@@ -57,7 +57,7 @@
                                     </ul>
                                 </li>
                                 {% if request.user.is_authenticated %}
-                                    <li><a href="#">{{user.username}} <span class="arrow_carrot-down"></span></a>
+                                    <li><a href="#">Hola,{{user.username}} <span class="arrow_carrot-down"></span></a>
                                         <ul class="dropdown">
                                             <li><a href={% url 'perfil' %}>Mi perfil</a></li>
                                             <li><a href={% url 'exit' %}>Cerrar sesión</a></li>
